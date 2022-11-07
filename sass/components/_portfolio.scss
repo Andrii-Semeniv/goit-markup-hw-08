@@ -1,0 +1,110 @@
+.portfolio-list {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 50px;
+}
+
+.portfolio-list-btn {
+  padding: 6px 22px;
+
+  font-family: inherit;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  border-color: transparent;
+  border-radius: 4px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  background-color: var(--background-color-third);
+  transition: color var(--animation), background-color var(--animation),
+    box-shadow var(--animation);
+
+  &:hover,
+  &:focus {
+    color: var(--second-color);
+    background-color: var(--btn-background-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.portfolio-examples-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+.portfolio-examples-item {
+  margin: 15px;
+  width: 370px;
+}
+
+.portfolio-link {
+  width: 100%;
+  height: 100%;
+  display: block;
+  color: var(--main-color);
+  background-color: var(--background-color-third);
+  transition: box-shadow var(--animation), transform var(--animation);
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+  &:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+.portfolio-img-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-img-text {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateY(100%);
+  transition: transform var(--animation);
+  overflow: auto;
+
+  padding: 63px 24px 0px 24px;
+  height: 100%;
+
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--second-color);
+
+  background: rgba(33, 150, 243, 0.9);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  .portfolio-link:hover & {
+    transform: translateY(0);
+  }
+  .portfolio-link:focus & {
+    transform: translateY(0);
+  }
+}
+
+.portfolio-examples-name {
+  margin-bottom: 4px;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.portfolio-examples-type {
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.03em;
+  color: var(--second-text-color);
+}
+
+.portfolio-img-sign {
+  padding: 20px 24px;
+  background-color: var(--team-background-color);
+  border-left: 1px solid var(--border-color-second);
+  border-right: 1px solid var(--border-color-second);
+  border-bottom: 1px solid var(--border-color-second);
+}
