@@ -83,10 +83,21 @@ ul {
     width: 768px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
 
 .section {
   padding-top: 60px;
   padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .header {
@@ -232,8 +243,10 @@ ul {
   background-color: var(--btn-second-color);
 }
 
-.advantage {
-  padding-bottom: 47px;
+@media screen and (min-width: 1200px) {
+  .advantage {
+    padding-bottom: 47px;
+  }
 }
 .advantage-list {
   display: flex;
@@ -243,6 +256,16 @@ ul {
 .advantage-list__item {
   width: 100%;
   display: block;
+}
+@media screen and (min-width: 768px) {
+  .advantage-list__item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .advantage-list__item {
+    width: calc((100% - 90px) / 4);
+  }
 }
 
 .advantage-list__item::before {
@@ -281,6 +304,11 @@ ul {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .advantage-list__title {
+    text-align: left;
+  }
 }
 
 .advantage-list__text {
@@ -328,10 +356,18 @@ ul {
 }
 
 .team-title {
-  font-size: 36px;
-  line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
+  font-size: 28px;
+  line-height: 1.18;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .team-title {
+    font-size: 36px;
+    line-height: 1.16;
+    margin-bottom: 50px;
+  }
 }
 
 .team {
@@ -341,12 +377,18 @@ ul {
 
 .team-list {
   display: flex;
+  flex-wrap: wrap;
   text-align: center;
   gap: 30px;
 }
 
 .img-sign {
-  padding: 30px 0;
+  padding: 30px 0 24px 0;
+}
+@media screen and (min-width: 1200px) {
+  .img-sign {
+    padding: 30px 0;
+  }
 }
 
 .team-list-item {
@@ -354,9 +396,15 @@ ul {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-
-.team-title {
-  margin-bottom: 50px;
+@media screen and (min-width: 768px) {
+  .team-list-item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team-list-item {
+    width: calc((100% - 90px) / 4);
+  }
 }
 
 .team-list-name {

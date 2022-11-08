@@ -1,5 +1,7 @@
 .advantage {
-  padding-bottom: 47px;
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 47px;
+  }
   &-list {
     display: flex;
     flex-wrap: wrap;
@@ -7,10 +9,16 @@
     &__item {
       width: 100%;
       display: block;
+
+      @media screen and (min-width: 768px) {
+        width: calc((100% - 30px) / 2);
+      }
+      @media screen and (min-width: 1200px) {
+        width: calc((100% - 90px) / 4);
+      }
     }
   }
 }
-
 .advantage-list__item::before {
   content: "";
   height: 120px;
@@ -44,6 +52,9 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-align: center;
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
 }
 .advantage-list__text {
   font-size: 14px;
