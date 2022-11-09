@@ -1,5 +1,9 @@
 .examples {
   padding-top: 47px;
+  display: none;
+  @media screen and (min-width: 1200px) {
+    display: contents;
+  }
   &-title {
     margin-bottom: 50px;
 
