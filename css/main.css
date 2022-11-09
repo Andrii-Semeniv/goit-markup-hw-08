@@ -209,9 +209,19 @@ ul {
   background-position: center;
   background-size: cover;
 }
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg-mobile-2x.jpg);
+  }
+}
 @media screen and (min-width: 768px) {
   .hero {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg-tablet.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg-tablet-2x.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -224,7 +234,13 @@ ul {
     background-size: cover;
   }
 }
-.hero .hero__title {
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg-2x.jpg);
+  }
+}
+
+.hero__title {
   margin: 0 auto;
   margin-bottom: 30px;
   max-width: 360px;
@@ -236,18 +252,19 @@ ul {
   color: var(--second-color);
 }
 @media screen and (min-width: 480px) {
-  .hero .hero__title {
+  .hero__title {
     font-size: 26px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .hero .hero__title {
+  .hero__title {
     font-size: 44px;
     line-height: 1.36;
     max-width: 696px;
   }
 }
-.hero .hero__btn {
+
+.hero__btn {
   padding: 10px 24px;
   min-width: 200px;
   font-family: inherit;
@@ -264,11 +281,11 @@ ul {
   cursor: pointer;
   transition: background-color var(--animation);
 }
-.hero .hero__btn:hover, .hero .hero__btn:focus {
+.hero__btn:hover, .hero__btn:focus {
   background-color: var(--btn-second-color);
 }
 @media screen and (min-width: 1200px) {
-  .hero .hero__btn {
+  .hero__btn {
     padding: 10px 32px;
   }
 }
