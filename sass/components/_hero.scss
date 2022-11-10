@@ -14,9 +14,7 @@
     ),
     url(../images/hero-bg-mobile.jpg);
 
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
+  @include retina {
     background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.4),
@@ -28,7 +26,7 @@
   background-position: center;
   background-size: cover;
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.4),
@@ -36,9 +34,7 @@
       ),
       url(../images/hero-bg-tablet.jpg);
 
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
+    @include retina {
       background-image: linear-gradient(
           to right,
           rgba(47, 48, 58, 0.4),
@@ -48,7 +44,7 @@
     }
   }
 
-  @media screen and (min-width: 1200px) {
+  @include desctop {
     padding-top: 200px;
     padding-bottom: 200px;
 
@@ -62,9 +58,7 @@
     background-position: center;
     background-size: cover;
 
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
+    @include retina {
       background-image: linear-gradient(
           to right,
           rgba(47, 48, 58, 0.4),
@@ -85,10 +79,10 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--second-color);
-  @media screen and (min-width: 480px) {
+  @include mobile {
     font-size: 26px;
   }
-  @media screen and (min-width: 1200px) {
+  @include desctop {
     font-size: 44px;
     line-height: 1.36;
     max-width: 696px;
@@ -116,7 +110,7 @@
   &:focus {
     background-color: var(--btn-second-color);
   }
-  @media screen and (min-width: 1200px) {
+  @include desctop {
     padding: 10px 32px;
   }
 }

@@ -1,5 +1,5 @@
 .advantage {
-  @media screen and (min-width: 1200px) {
+  @include desctop{
     padding-bottom: 47px;
   }
   &-list {
@@ -10,10 +10,10 @@
       width: 100%;
       display: block;
 
-      @media screen and (min-width: 768px) {
+      @include tablet {
         width: calc((100% - 30px) / 2);
       }
-      @media screen and (min-width: 1200px) {
+      @include desctop {
         width: calc((100% - 90px) / 4);
       }
     }
@@ -52,7 +52,7 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-align: center;
-  @media screen and (min-width: 768px) {
+  @include tablet {
     text-align: left;
   }
 }

@@ -5,7 +5,7 @@
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-color);
-  @media screen and (min-width: 1200px) {
+  @include desctop {
     margin-bottom: 50px;
     font-size: 36px;
   }
@@ -18,10 +18,10 @@
 }
 .clients-list-item {
   width: calc((100% - 30px) / 2);
-  @media screen and (min-width: 768px) {
+  @include tablet {
     width: calc((100% - 60px) / 3);
   }
-  @media screen and (min-width: 1200px) {
+  @include desctop {
     width: calc((100% - 150px) / 6);
   }
 }
