@@ -8,7 +8,7 @@
 }
 
 .navigation {
-  display: flex;
+  display: none;
   gap: 50px;
 
   font-weight: 500;
@@ -47,7 +47,7 @@
 }
 
 .contact-list {
-  display: flex;
+  display: none;
   gap: 50px;
   margin-left: auto;
 }
@@ -75,4 +75,66 @@
 .contact-list__logo-tel {
   fill: currentColor;
   margin-right: 10px;
+}
+.menu-open-btn {
+  margin-left: auto;
+  width: 40px;
+  height: 40px;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.menu-close-btn {
+  display: block;
+  margin-left: auto;
+  width: 40px;
+  height: 40px;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.mobile-container {
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.mob-menu {
+  padding-top: 10px;
+  padding-bottom: 48px;
+
+  position: fixed;
+  top: 0;
+  background-color: var(--team-background-color);
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
+.mobile-close-icon {
+}
+.mobile {
+  margin-bottom: 302px;
+}
+
+.mobile__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile__link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+
+  color: var(--main-color);
+}
+.mobile__link .current {
+}
+.mob-contact-list {
+}
+.mob-contact-list__header-tel {
+}
+.mob-contact-list__header-mail {
 }

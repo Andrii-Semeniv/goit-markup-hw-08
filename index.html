@@ -23,7 +23,7 @@
   </head>
 
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header-container">
         <a class="logo" lang="en" href="./index.html">
           Web<span class="logo--part">Studio</span>
@@ -64,8 +64,53 @@
             >
           </li>
         </ul>
+
+        <button type="button" class="menu-open-btn">
+          <svg class="mobile-menu-icon" width="24" height="16">
+            <use href="./images/icons.svg#icon-mob-menu"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+      <div class="mob-menu">
+        <div class="mobile-container">
+          <button type="button" class="menu-close-btn">
+            <svg class="mobile-close-icon" width="19" height="19">
+              <use href="./images/icons.svg#icon-mob-close-menu"></use>
+            </svg>
+          </button>
+          <ul class="mobile list">
+            <li class="mobile__item">
+              <a class="mobile__link link current" href="#">Студія</a>
+            </li>
+            <li class="mobile__item">
+              <a class="mobile__link link" href="./portfolio.html">Портфоліо</a>
+            </li>
+            <li class="mobile__item">
+              <a class="mobile__link link" href="#">Контакти</a>
+            </li>
+          </ul>
+
+          <ul class="list mob-contact-list">
+            <li>
+              <a
+                class="mob-contact-list__header-tel link"
+                href="tel:+380961111111"
+              >
+                +38 096 111 11 11</a
+              >
+            </li>
+            <li>
+              <a
+                class="mob-contact-list__header-mail link"
+                href="mailto:info@devstudio.com"
+              >
+                info@devstudio.com</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
     <main>
       <section class="hero section">
         <div class="container">
