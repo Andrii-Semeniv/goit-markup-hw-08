@@ -6,8 +6,24 @@
 
 .footer-container {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  align-items: center;
+  @include desctop {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+  }
 }
+
+.footer-section {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+}
+
 .logo-footer {
   padding: 0;
 }
@@ -17,8 +33,15 @@
 }
 .adress {
   margin-top: 20px;
-
   font-style: normal;
+}
+.adress-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include desctop {
+    display: contents;
+  }
 }
 .adress-list-item {
   margin-top: 9px;
@@ -57,19 +80,30 @@
 }
 
 .footer-media {
-  margin-left: 70px;
-  margin-right: 93px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 60px;
+  @include desctop {
+    margin-left: 70px;
+    margin-right: 93px;
+    margin-bottom: 0px;
+  }
 }
 
 .media-text {
   margin-bottom: 20px;
+  text-align: center;
 
   font-weight: 700;
   font-size: 14px;
-  line-height: 1.16;
+  line-height: 1.71;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--second-color);
+  @include desctop {
+    text-align: left;
+    line-height: 1.16;
+  }
 }
 
 .footer-list {
@@ -109,6 +143,7 @@
 }
 .footer-form-title {
   margin-bottom: 20px;
+  text-align: center;
 
   font-weight: 700;
   font-size: 14px;
@@ -116,11 +151,16 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--second-color);
+
+  @include desctop {
+    text-align: left;
+  }
 }
 .footer-form-email {
+  display: block;
+  width: 100%;
   padding-left: 15px;
 
-  width: 358px;
   height: 50px;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -130,6 +170,10 @@
   color: var(--second-color);
 
   transition: border-color var(--animation);
+  @include desctop {
+    width: 358px;
+  }
+
   &:focus {
     border-color: var(--btn-background-color);
     outline: transparent;
@@ -147,7 +191,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 10px;
 
   width: 200px;
   height: 50px;
@@ -166,6 +209,9 @@
   fill: var(--second-color);
 
   transition: background-color var(--animation);
+  @include desctop {
+    margin-left: 10px;
+  }
   &:hover {
     background-color: var(--btn-second-color);
   }
@@ -176,5 +222,13 @@
 }
 .footer-sign {
   display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
+
+  @include desctop {
+    flex-wrap: nowrap;
+    gap: 0;
+  }
 }

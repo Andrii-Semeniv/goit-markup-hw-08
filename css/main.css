@@ -737,7 +737,24 @@ ul {
 
 .footer-container {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 1200px) {
+  .footer-container {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+  }
 }
 
 .logo-footer {
@@ -751,6 +768,17 @@ ul {
 .adress {
   margin-top: 20px;
   font-style: normal;
+}
+
+.adress-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 1200px) {
+  .adress-list {
+    display: contents;
+  }
 }
 
 .adress-list-item {
@@ -793,18 +821,33 @@ ul {
 }
 
 .footer-media {
-  margin-left: 70px;
-  margin-right: 93px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .footer-media {
+    margin-left: 70px;
+    margin-right: 93px;
+    margin-bottom: 0px;
+  }
 }
 
 .media-text {
   margin-bottom: 20px;
+  text-align: center;
   font-weight: 700;
   font-size: 14px;
-  line-height: 1.16;
+  line-height: 1.71;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--second-color);
+}
+@media screen and (min-width: 1200px) {
+  .media-text {
+    text-align: left;
+    line-height: 1.16;
+  }
 }
 
 .footer-list {
@@ -846,6 +889,7 @@ ul {
 
 .footer-form-title {
   margin-bottom: 20px;
+  text-align: center;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -853,10 +897,16 @@ ul {
   text-transform: uppercase;
   color: var(--second-color);
 }
+@media screen and (min-width: 1200px) {
+  .footer-form-title {
+    text-align: left;
+  }
+}
 
 .footer-form-email {
+  display: block;
+  width: 100%;
   padding-left: 15px;
-  width: 358px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -864,6 +914,11 @@ ul {
   background-color: var(--background-color-second);
   color: var(--second-color);
   transition: border-color var(--animation);
+}
+@media screen and (min-width: 1200px) {
+  .footer-form-email {
+    width: 358px;
+  }
 }
 .footer-form-email:focus {
   border-color: var(--btn-background-color);
@@ -892,7 +947,6 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 10px;
   width: 200px;
   height: 50px;
   background: var(--btn-background-color);
@@ -908,6 +962,11 @@ ul {
   fill: var(--second-color);
   transition: background-color var(--animation);
 }
+@media screen and (min-width: 1200px) {
+  .footer-form-button {
+    margin-left: 10px;
+  }
+}
 .footer-form-button:hover {
   background-color: var(--btn-second-color);
 }
@@ -918,7 +977,16 @@ ul {
 
 .footer-sign {
   display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
+}
+@media screen and (min-width: 1200px) {
+  .footer-sign {
+    flex-wrap: nowrap;
+    gap: 0;
+  }
 }
 
 .portfolio-list {
