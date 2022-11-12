@@ -85,6 +85,14 @@
   border: none;
   cursor: pointer;
 }
+.menu-close-btn:focus,
+.menu-close-btn:hover .mobile-close-icon {
+  fill: blue;
+}
+.mobile-close-icon {
+  transition: fill var(--animation);
+}
+
 .menu-close-btn {
   display: block;
   margin-left: auto;
@@ -97,10 +105,11 @@
 }
 .mobile-container {
   width: 100%;
+  height: 100%;
   padding-left: 40px;
-  padding-right: 40px;
+  padding-right: 15px;
 }
-.mob-menu {
+.menu {
   padding-top: 10px;
   padding-bottom: 48px;
 
@@ -116,6 +125,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: auto;
 }
 
 .mobile {
