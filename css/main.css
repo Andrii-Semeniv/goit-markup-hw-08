@@ -166,6 +166,12 @@ ul {
     display: none;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contact-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
 
 .contact-list__header-mail,
 .contact-list__header-tel {
@@ -179,6 +185,13 @@ ul {
   letter-spacing: 0.02em;
   color: var(--second-text-color);
   transition: color var(--animation);
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contact-list__header-mail,
+.contact-list__header-tel {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
 }
 .contact-list__header-mail:hover, .contact-list__header-mail:focus,
 .contact-list__header-tel:hover,
@@ -334,6 +347,20 @@ ul {
   letter-spacing: 0.03em;
   color: var(--link-color);
   text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+  .logo {
+    margin-right: 87px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .logo {
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 93px;
+  }
 }
 .logo--part {
   color: var(--logo-color);
@@ -1008,8 +1035,8 @@ ul {
 
 .modal {
   padding: 40px;
-  width: 528px;
-  min-height: 581px;
+  width: 100%;
+  min-height: 609px;
   background-color: var(--team-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -1018,6 +1045,18 @@ ul {
   left: 50%;
   transform: translate(-50%, -50%) scaleY(1);
   transition: transform var(--animation);
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+    min-height: 609px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    min-height: 581px;
+  }
 }
 
 .backdrop.is-hidden .modal {
@@ -1060,10 +1099,15 @@ ul {
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   letter-spacing: 0.03em;
   color: var(--main-color);
   text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .modal-title {
+    line-height: 1.15;
+  }
 }
 
 .modal-field {
@@ -1146,15 +1190,21 @@ ul {
 
 .modal-submit-field {
   margin-bottom: 30px;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   color: var(--second-text-color);
   text-align: center;
 }
+@media screen and (min-width: 1200px) {
+  .modal-submit-field {
+    font-size: 14px;
+  }
+}
 
 .modal-submit-label {
   position: relative;
+  line-height: 1.71;
 }
 
 .modal-icon,
