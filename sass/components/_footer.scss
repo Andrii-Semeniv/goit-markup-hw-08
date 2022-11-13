@@ -8,8 +8,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  @include tablet {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
   @include desctop {
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: row;
     align-items: baseline;
   }
@@ -22,10 +29,23 @@
     align-items: center;
     margin-bottom: 60px;
   }
+  @include tablet {
+    margin-right: 165px;
+  }
+  @include desctop {
+    margin-right: 0;
+  }
 }
 
 .logo-footer {
   padding: 0;
+  margin: 0;
+  @include tablet {
+    text-align: center;
+  }
+  @include desctop {
+    text-align: left;
+  }
 }
 
 .logo-part-footer {
@@ -100,6 +120,9 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--second-color);
+  @include tablet {
+    line-height: 1.14;
+  }
   @include desctop {
     text-align: left;
     line-height: 1.16;
@@ -140,6 +163,13 @@
 }
 .footer-form {
   width: 100%;
+  @include tablet {
+    margin-top: 60px;
+    width: 450px;
+  }
+  @include desctop {
+    margin-top: 0;
+  }
 }
 .footer-form-title {
   margin-bottom: 20px;
@@ -170,6 +200,7 @@
   color: var(--second-color);
 
   transition: border-color var(--animation);
+
   @include desctop {
     width: 358px;
   }
